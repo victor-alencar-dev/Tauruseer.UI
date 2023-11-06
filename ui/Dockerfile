@@ -1,0 +1,18 @@
+FROM node:16-alpine
+
+WORKDIR /usr/server/app
+
+COPY ./package.json ./
+
+RUN npm install --legacy-peer-deps
+
+COPY ./ .
+
+ENV KENDO_UI_LICENSE=eyJhbGciOiJSUzI1NiIsInR5cCI6IkxJQyJ9.eyJwcm9kdWN0cyI6W3sidHJpYWwiOmZhbHNlLCJjb2RlIjoiS0VORE9VSVJFQUNUIiwibGljZW5zZUV4cGlyYXRpb25EYXRlIjoxNzAxOTU0NzgwfV0sImludGVncml0eSI6Im81OHRcL21EdEZneVJuY0syTXRGZzN6K0NVWDg9IiwibGljZW5zZUhvbGRlciI6ImplcmVteUB0YXVydXNlZXIuY29tIiwiaWF0IjoxNjcwNDY0NTM0LCJhdWQiOiJqZXJlbXlAdGF1cnVzZWVyLmNvbSIsInVzZXJJZCI6ImMzNjUwYmM3LWMzMTAtNGU2My1hOTI1LWI5YjE5MmRjZTAxMiJ9.Pxvox_tDhMKN91TH2igaoGCMt1EkIFONsQTeJdRBU9rfy76AWmvj51dQWDmbCN6sZkW1-gnnLdEBkJ-uu8gm0HH898kc3uAyiQ_r8vBuGbRGd2cJeOg_SW0F6qV0FtsgFv9tK7ud-y_3ZAwuB7_p_uqWF0Jv9Ls2Cetm7r-qWeo2LD-kMGsXbqw1bMb1JkhIoadK-HYKalhduOuuWWq3aPAsa8vh-fINzEVvAw4BgFbXR9jxDLC1j66mju_wlpMVYy9d-2z8oHrwIC77SinIaWT8hs8CJesDhq8msJs7FMs-NrubvbY0Ppk0rcpvdlgAcQCkilIjzUwHPXSTz7UDOA
+RUN npx kendo-ui-license activate
+
+RUN npm run build
+ENV NODE_ENV=production
+
+CMD ["npm", "run", "start"]
+

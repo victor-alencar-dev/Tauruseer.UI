@@ -1,0 +1,174 @@
+@import '../theme/typography.scss';
+@import '../theme/palette.scss';
+
+.info-card__main {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: 1fr;
+  padding: 8px 24px;
+  gap: 24px;
+}
+
+.info-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    @extend .typography-display;
+    color: $palette-text-primary;
+    text-decoration: none;
+    margin-top: 8px;
+
+    & h2 {
+      line-height: 150%;
+      margin: 0;
+    }
+
+    &-icon {
+      margin-left: 8px;
+    }
+  }
+
+  &__subtitle {
+    @extend .typography-h1, .text-ml, .font-regular;
+    color: $palette-text-subtitle;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    gap: 4px;
+
+    &--strong {
+      @extend .font-medium;
+      color: $palette-text-subtitle-strong;
+    }
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 8px;
+
+    & button {
+      display: flex;
+      flex-shrink: 0;
+      padding: 16px 32px;
+    }
+
+    & a {
+      display: flex;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.info-card-sidebar {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 16px 32px;
+  border-radius: 10px;
+  background: var(--neutral-neutral-100, #f3f4f6);
+
+  &__item-title {
+    @extend .typography-h1;
+  }
+}
+
+.info-card-textbox {
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+  border-radius: 10px;
+  border: 1px solid $palette-secondary-light;
+  padding: 16px;
+
+  &__title {
+    @extend .typography-h1;
+    color: $palette-text-primary;
+  }
+
+  &__button {
+    position: absolute;
+    top: 24px;
+    right: 56px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $palette-text-subtitle;
+  }
+}
+
+.info-card-textbox {
+  &__content {
+    position: absolute;
+    width: 95%;
+  }
+  & pre {
+    padding: 0.5em;
+    background-color: #282b2e;
+    color: $palette-info-light;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @extend .typography-h1;
+  }
+}
+
+.info-card__footer {
+  padding: 24px;
+}
+
+.info-card-references {
+  text-align: left;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid $palette-secondary-light;
+  padding: 16px;
+
+  &__title {
+    @extend .typography-h1;
+    color: $palette-text-primary;
+  }
+
+  &__item {
+    @extend .typography-h2;
+    @extend .font-regular;
+    @extend .text-md;
+  }
+
+  &__separator {
+    margin-inline: 16px;
+  }
+}
+
+// Info Card Table
+.info-card-table {
+  grid-column: span 2;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid $palette-secondary-light;
+  background: #fff;
+
+  .grid-container {
+    margin-bottom: -20px;
+  }
+}

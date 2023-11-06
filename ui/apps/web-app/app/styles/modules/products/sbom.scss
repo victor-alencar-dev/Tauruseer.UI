@@ -1,0 +1,26 @@
+@import '../../theme/palette';
+.sbomTabs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-right: 16px;
+  padding: 8px;
+  cursor: pointer;
+}
+.isTabActive {
+  border-bottom: solid 1.5px #3f51b5;
+}
+.sbomContainer {
+  align-items: flex-start;
+  gap: 16px;
+}
+.sbomModal {
+  height: 200px;
+  width: 259px;
+  padding: 48px 32px;
+  border-radius: 10px;
+  border: 0.8px solid $palette-primary-main;
+  box-shadow: 0px 2px 3px 0px rgba(53, 39, 144, 0.18), 0px 4px 12px 0px rgba(53, 39, 144, 0.12),
+    0px 4px 8px 0px rgba(155, 145, 225, 0.2);
+}

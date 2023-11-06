@@ -1,0 +1,98 @@
+@import './palette.scss';
+@import './shadows.scss';
+@import './typography.scss';
+
+// primary
+.k-button-solid-dark:focus,
+.k-button-solid-dark.k-focus {
+  box-shadow: $shadow-button;
+}
+
+.k-button-solid-dark:hover,
+.k-button-solid-dark.k-hover {
+  background-color: rgb(122, 108, 215);
+}
+//secondary btn
+.k-button-solid-light:focus,
+.k-button-solid-light.k-focus {
+  box-shadow: $shadow-button;
+}
+
+.k-button-solid-light:hover,
+.k-button-solid-light.k-hover {
+  border: 0.8px solid $palette-primary-main;
+  background-color: white;
+}
+
+// Styles
+.button {
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: spacing(1.5);
+  font-family: $ff-ubuntu;
+  font-size: 1.14286rem;
+  text-align: center;
+  cursor: pointer;
+
+  &-primary {
+    box-shadow: $shadow-button-purple;
+    background-color: $palette-primary-main;
+    color: white;
+  }
+
+  &-secondary {
+    background-color: white;
+    color: $palette-primary-main;
+    border: 0.8px solid #9b91e1;
+  }
+
+  &-text {
+    background-color: white;
+    color: $palette-text-primary;
+
+    &:hover,
+    &.k-hover {
+      background-color: darken(white, 10%);
+      border: none;
+    }
+  }
+
+  &-error {
+    box-shadow: $shadow-button;
+    background-color: $palette-error-main;
+    color: white;
+    .k-button-solid-error {
+      &:hover,
+      &.k-hover {
+        background-color: darken($palette-error-main, 10%);
+      }
+    }
+    .k-button-outline-error {
+      &:hover,
+      &.k-hover {
+        background-color: darken($palette-error-main, 10%);
+      }
+    }
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+
+  .button {
+    background-color: transparent;
+    color: $palette-primary-dark;
+    box-shadow: none;
+  }
+
+  .selected {
+    background-color: white;
+    box-shadow: 0px 1px 5px rgba(51, 63, 72, 0.25), 0px 2px 2px rgba(51, 63, 72, 0.25) !important;
+  }
+}
+.k-badge-inside,
+.k-badge-edge {
+  z-index: 99;
+}

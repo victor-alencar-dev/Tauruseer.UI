@@ -1,0 +1,113 @@
+@import '../../theme/palette.scss';
+@import '../../theme/typography.scss';
+
+.security-controls {
+  &__heading {
+    @extend .typography-h1;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 24px;
+    align-self: baseline;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+
+  &__tab {
+    @extend .typography-body1, .text-md, .font-bold;
+    flex-grow: 0;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid $palette-grey-500;
+    }
+
+    &--active,
+    &--active:hover {
+      border-bottom: 2px solid #4231b4;
+    }
+
+    @media (min-width: 1800px) {
+      font-size: 16px;
+    }
+  }
+
+  &__card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px #3527902e, 0 4px 12px #3527901f, 0 4px 8px #9b91e133;
+    padding: 12px;
+    overflow-x: auto;
+    margin: 0;
+    margin-bottom: 1rem;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 131px;
+    margin-inline: 20px;
+
+    &-category {
+      @extend .typography-body2, .text-md;
+      padding: 0;
+      margin-top: 1em;
+      color: $palette-primary-dark;
+    }
+  }
+
+  &__icon {
+    position: relative;
+
+    &-primary {
+      color: $palette-grey-500;
+    }
+
+    &-modifier {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 10;
+      background-color: #fff;
+      border-radius: 50%;
+      transform: translate(20%, 20%);
+    }
+
+    &-caption {
+      @extend .typography-body2, .text-sm;
+      margin-block: 16px;
+      padding: 0;
+      color: $palette-grey-500;
+    }
+
+    a > &-caption {
+      color: $palette-info-main;
+    }
+  }
+}

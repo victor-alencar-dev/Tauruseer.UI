@@ -1,0 +1,47 @@
+@import '../../theme/palette.scss';
+.cognition-content {
+  padding: 24px 32px;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 130px;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__pipe {
+    width: 1px;
+    height: 21px;
+    opacity: 0.5;
+    margin: 0 4px;
+  }
+  &__type {
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7eb;
+    color: $palette-text-subtitle;
+    border-radius: 6px;
+    padding: 2px 8px;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    overflow-y: auto;
+    width: 80%;
+    p {
+      margin: auto;
+    }
+  }
+  .ts-chip-severity {
+    display: flex;
+    justify-content: center;
+  }
+}
+.cognition-pager {
+  position: absolute;
+  border-radius: 0px 0px 5px 5px;
+  background: var(--White, #fff);
+  bottom: 0;
+  width: 100%;
+}

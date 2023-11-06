@@ -1,0 +1,17 @@
+.small-card-grid {
+  &__copy {
+    margin: 0 0 4px;
+  }
+
+  &__filter {
+    background-color: #fff;
+    margin-top: 4px;
+  }
+
+  &__grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 16px;
+  }
+}

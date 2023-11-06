@@ -1,0 +1,41 @@
+@import 'palette';
+
+.vulnerability-remediation-table {
+  width: 100%;
+
+  th {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 16px;
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 10px;
+    }
+  }
+
+  td {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 16px;
+    width: 50%;
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 10px;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid grey;
+    border-color: rgba($palette-primary-dark, 0.25);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  tr:nth-child(even) td {
+    background-color: rgba($palette-secondary-light, 0.2);
+  }
+}

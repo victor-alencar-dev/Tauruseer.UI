@@ -1,0 +1,63 @@
+.ts-accordion {
+  list-style: none;
+  padding: 0;
+  margin: 35px 0 0;
+
+  &-item {
+    $self: &;
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+      cursor: pointer;
+    }
+
+    &__copy {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      margin: 18px 6.5rem;
+    }
+
+    &__subtitle {
+      color: #1b2124;
+      font-weight: 400;
+    }
+
+    &__icon {
+      font-size: 16px;
+      margin: 18px 16px;
+      transition: transform 0.3s linear;
+    }
+
+    &__content-wrapper {
+      transition: grid-template-rows 0.3s linear;
+      display: grid;
+      grid-template-rows: 0fr;
+    }
+
+    &__content {
+      overflow: hidden;
+    }
+
+    &--active {
+      #{$self}__icon {
+        transform: rotate(180deg);
+      }
+
+      #{$self}__content-wrapper {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+}

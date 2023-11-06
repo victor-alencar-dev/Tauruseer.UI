@@ -1,0 +1,15 @@
+@import 'palette';
+
+.k-tooltip {
+  background-color: $palette-primary-dark;
+
+  .k-tooltip-content {
+    padding: 4px 8px;
+    width: 210px;
+    text-align: center;
+  }
+
+  .k-callout {
+    color: $palette-primary-dark;
+  }
+}

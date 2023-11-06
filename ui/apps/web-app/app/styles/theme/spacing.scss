@@ -1,0 +1,5 @@
+$scaling-factor: 8;
+
+@function spacing($multiplier) {
+  @return ($multiplier * $scaling-factor) + px;
+}

@@ -1,0 +1,195 @@
+@import '../../theme/palette.scss';
+
+.k-avatar-solid-primary {
+  background-color: $palette-background-color;
+  color: $palette-primary-dark;
+}
+
+.cvssTabs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.isTabCvssActive {
+  border-bottom: solid 1.5px #3f51b5;
+}
+
+.detailCvssCard {
+  .capitalize-first {
+    text-transform: lowercase;
+  }
+  .capitalize-first::first-letter {
+    text-transform: uppercase;
+  }
+}
+.cvss-empty {
+  height: 20.1875rem;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid rgba(27, 33, 36, 0.25); // figma color not mapped to the palette
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: inherit;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  .cvs-empty-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    span {
+      font-size: 4rem;
+      color: $palette-primary-main;
+    }
+  }
+}
+.security-control {
+  height: 293px;
+  padding: 32px 24px;
+  &__body {
+    height: 165px;
+    margin-top: 0.5rem;
+    overflow-y: auto;
+  }
+  &__footer {
+    border-top: solid 1px $palette-text-muted;
+    padding-top: 8px;
+  }
+  &__description {
+    margin-bottom: 24px;
+    width: 43%;
+    padding-left: 3px;
+  }
+}
+
+.product-detail {
+  position: relative;
+  &__grid-row-1 {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 512px);
+    grid-template-rows: 380px;
+    padding: 8px 0px;
+    gap: 24px;
+  }
+
+  &__grid--security-controls {
+    overflow: hidden;
+    padding: 16px 24px;
+  }
+
+  &__grid--repositories {
+    width: 100%;
+    position: relative;
+    padding: 16px 24px;
+    // margin-bottom: 0;
+  }
+}
+// prioritized risk component
+
+.prioritized-risk-cards {
+  height: 432px;
+  width: 32%;
+  padding: 24px;
+  &_title {
+    margin-bottom: 24px;
+    font-size: 14px;
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 12px;
+    }
+  }
+  &_content {
+    height: 328px;
+    padding: 16px;
+    border: 1px solid $palette-secondary-light;
+    border-radius: 10px;
+  }
+}
+.prioritized-risk-tabs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-right: 16px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.prioritized-risk-vulnerabilities {
+  overflow-y: auto;
+  &_content {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+  }
+  &_content:nth-child(even) {
+    background: rgba(237, 235, 249, 0.5);
+  }
+  &_text {
+    width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: underline;
+    color: $palette-primary-main;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 12px;
+    }
+  }
+  &_source {
+    font-size: 14px;
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 12px;
+    }
+  }
+  i {
+    color: $palette-primary-main;
+  }
+}
+.prioritized-risk-remediation {
+  overflow-y: auto;
+  &_description {
+    width: 95%;
+    &_value {
+      font-size: 32px;
+      color: $palette-primary-main;
+      @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+        font-size: 28px;
+      }
+    }
+  }
+  &_header {
+    width: 100%;
+    margin-top: 25px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 8px 16px;
+    background: $palette-secondary-light;
+    color: $palette-primary-main;
+    height: 32px;
+    font-size: 14px;
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  &_content {
+    width: 100%;
+    border-radius: 10px;
+    padding: 8px 16px;
+    height: 32px;
+    font-size: 14px;
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  &_content:nth-child(even) {
+    background: rgba(237, 235, 249, 0.5);
+  }
+}

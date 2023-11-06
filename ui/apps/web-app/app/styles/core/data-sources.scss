@@ -1,0 +1,70 @@
+@import '../theme/palette.scss';
+
+.data-source-container {
+  border: 1px solid rgb($palette-text-primary, 0.25);
+  background-color: white;
+  min-height: 88px;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 200ms ease 0s;
+
+  &-mapped {
+    border-left: 4px solid $palette-text-success;
+  }
+
+  &-no-connected {
+    border-left: 4px solid $palette-text-muted;
+  }
+
+  &-connected {
+    border-left: 4px solid $palette-warning-main;
+  }
+}
+
+// fixes missing padding on datepicker
+.k-input.k-datepicker .k-input-inner[role='combobox'] {
+  padding-left: 0.75rem;
+}
+
+.data-source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  row-gap: 12px;
+  column-gap: 20px;
+  padding: 0;
+
+  @media screen and (min-width: 900px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  &--expanded {
+    grid-template-columns: 1fr;
+  }
+
+  &-item {
+    border: 1px solid rgb($palette-text-primary, 0.25);
+    background-color: white;
+    min-height: 88px;
+    border-radius: 5px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--mapped {
+      border-left: 4px solid $palette-text-success;
+    }
+
+    &--no-connected {
+      border-left: 4px solid $palette-text-muted;
+    }
+
+    &--connected {
+      border-left: 4px solid $palette-warning-main;
+    }
+  }
+}

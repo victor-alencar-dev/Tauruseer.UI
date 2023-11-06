@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Start Left | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap");
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #edebf9;
+      overflow-x: hidden;
+      /* overflow-y: hidden; */
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    /* Overrides */
+    h1 {
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 18px;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    button {
+      background: #4231b4;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      padding: 12px;
+      color: white;
+      border: 0;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #261c67;
+    }
+
+    input {
+      width: 380px;
+      padding: 7px;
+      border-radius: 5px;
+      border: 1px solid rgba(15, 11, 41, 0.25);
+      font-family: Montserrat;
+      font-size: 14px;
+    }
+
+    input::placeholder {
+      color: #1b2124;
+      opacity: 0.5;
+    }
+
+    label {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #0f0b29;
+      font-weight: bold;
+      line-height: 28px;
+      text-decoration-thickness: 1px;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      margin: 19px;
+
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+
+      line-height: 150%;
+      color: #0f0b29;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Unique components */
+    #appbar {
+      height: 72px;
+      background: linear-gradient(90.02deg, #261c67 0.01%, #0f0b29 99.99%);
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    #appbar span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-size: 12px;
+      font-weight: 300;
+      color: #ffffff;
+      opacity: 0.5;
+    }
+
+    #appbar-logo {
+      z-index: 1200;
+    }
+    .appbar-img {
+      width: 42px;
+      height: 45px;
+    }
+    #appbar .curve {
+      position: absolute;
+      z-index: 0;
+    }
+
+    #cover-image {
+      height: calc(100vh - 72px);
+      position: "relative";
+      background-image: url("https://tsgeneralstorageqa.blob.core.windows.net/public/cover-login.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.33);
+    }
+
+    #cover-image img {
+      position: absolute;
+      bottom: 0;
+    }
+
+    #cover-image-overlay {
+      position: absolute;
+      background-color: #0f0b29;
+      opacity: 0.5;
+      width: 50%;
+      height: calc(100vh - 72px);
+    }
+
+    #form-container {
+      height: calc(100vh - 72px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #form-container .card {
+      width: 508px;
+      height: 542px;
+      background: #ffffff;
+      box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 64px;
+    }
+
+    #error-message:empty,
+    #success-message:empty {
+      display: none;
+    }
+
+    .js-card-transition {
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+    }
+
+    .js-card-transition--hidden {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+      top: 0;
+    }
+  </style>
+
+  <body>
+    <div id="appbar" class="d-flex">
+      <img
+        class="curve"
+        src="https://tsgeneralstorageqa.blob.core.windows.net/public/appbar-curve.svg"
+        alt="appbar-curve"
+      />
+
+      <div id="appbar-logo" class="mx-3 d-flex gap-3 align-items-center">
+        <img
+          src="https://tsgeneralstorageqa.blob.core.windows.net/public/appbar-logo.svg"
+          src="./img/start_left_logo.png"
+          alt="appbar-logo"
+          class="appbar-img"
+        />
+        <div class="d-flex flex-column justify-content-center">
+          <h1>Start Left Platform</h1>
+          <span>Login User</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Image -->
+      <div id="cover-image" class="col-6 d-none d-md-block">
+        <div id="cover-image-overlay"></div>
+        <img
+          src="https://tsgeneralstorageqa.blob.core.windows.net/public/background-curve.svg"
+          alt="background-curve"
+        />
+        <img
+          src="https://tsgeneralstorageqa.blob.core.windows.net/public/foreground-curve.svg"
+          alt="foreground-curve"
+        />
+      </div>
+
+      <!-- Form -->
+      <div id="form-container" class="col-12 col-md-6">
+        <div class="card d-flex align-items-center justify-content-start">
+          <!-- Logo -->
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <img
+              src="https://tsgeneralstorageqa.blob.core.windows.net/public/logo-ts-black.png"
+              alt="form-logo"
+            />
+          </div>
+
+          <!-- Error messagge -->
+          <div id="error-message" class="my-2 alert alert-danger"></div>
+
+          <!-- Success message -->
+          <div id="success-message" class="my-2 alert alert-success"></div>
+
+          <div class="position-relative h-100">
+            <form
+              id="form-login"
+              onsubmit="return false;"
+              method="post"
+              class="flex-fill h-100 d-flex flex-column justify-content-between js-card-transition"
+            >
+              <div>
+                <div class="d-flex flex-column">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="tauruseer@tauruseer.com"
+                  />
+                </div>
+
+                <div class="d-flex flex-column my-4">
+                  <label for="password">Password</label>
+                  <input id="password" type="password" placeholder="Password" />
+                </div>
+                <!-- Actions -->
+                <div class="d-flex justify-content-center">
+                  <button type="submit" id="btn-login">Login</button>
+                </div>
+              </div>
+              <!-- Forgot password -->
+              <div class="d-flex align-items-center flex-column mt-3">
+                <span>Did you forgot your password?</span>
+                <a href="#" id="btn-forgot-password">Click here</a>
+              </div>
+            </form>
+            <!-- Forgot Password Form -->
+
+            <form
+              id="form-reset-password"
+              onsubmit="return false;"
+              method="post"
+              class="flex-fill h-100 d-flex flex-column justify-content-between js-card-transition js-card-transition--hidden"
+            >
+              <div>
+                <div class="d-flex flex-column mb-4">
+                  <label for="email-reset">Email</label>
+                  <input
+                    id="email-reset"
+                    type="email"
+                    placeholder="tauruseer@tauruseer.com"
+                  />
+                </div>
+                <!-- Actions -->
+                <div class="d-flex justify-content-center">
+                  <button type="submit" id="btn-reset-password">
+                    Reset Password
+                  </button>
+                </div>
+              </div>
+              <!-- Forgot password -->
+              <div class="d-flex align-items-center flex-column mt-3">
+                <span>Already a user?</span>
+                <a href="#" id="btn-login-link">Log in</a>
+              </div>
+            </form>
+          </div>
+          <!-- Form -->
+        </div>
+
+        <footer>
+          © 2023 Start Left. <br />
+          US Patent 11,080,162 & 11,288,167
+        </footer>
+      </div>
+    </div>
+
+    <!--[if IE 8]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/ie8/0.2.5/ie8.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+      <script src="https://cdn.auth0.com/js/polyfills/1.0/base64.min.js"></script>
+      <script src="https://cdn.auth0.com/js/polyfills/1.0/es5-shim.min.js"></script>
+    <![endif]-->
+
+    <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
+    <script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        var loginState = true;
+
+        var config = JSON.parse(
+          decodeURIComponent(escape(window.atob("@@config@@")))
+        );
+
+        var leeway = config.internalOptions.leeway;
+        if (leeway) {
+          var convertedLeeway = parseInt(leeway);
+
+          if (!isNaN(convertedLeeway)) {
+            config.internalOptions.leeway = convertedLeeway;
+          }
+        }
+
+        var params = Object.assign(
+          {
+            overrides: {
+              __tenant: config.auth0Tenant,
+              __token_issuer: config.authorizationServer.issuer,
+            },
+            domain: config.auth0Domain,
+            clientID: config.clientID,
+            redirectUri: config.callbackURL,
+            responseType: "code",
+          },
+          config.internalOptions
+        );
+
+        var webAuth = new auth0.WebAuth(params);
+        var databaseConnection = "Username-Password-Authentication";
+        var captcha = webAuth.renderCaptcha(
+          document.querySelector(".captcha-container")
+        );
+
+        function login(e) {
+          e.preventDefault();
+          cleanMessages();
+          var button = this;
+          var username = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+
+          if (!username || !password) {
+            displayError({ description: "Please fill all the fields" });
+            return;
+          }
+
+          button.disabled = true;
+          webAuth.login(
+            {
+              realm: databaseConnection,
+              username: username,
+              password: password,
+            },
+            function (err) {
+              if (err) {
+                captcha.reload();
+                displayError(err);
+              }
+              button.disabled = false;
+            }
+          );
+        }
+
+        function toggleForgotPasswordUI() {
+          cleanMessages();
+          loginState = !loginState;
+          var form = document.getElementById("form-login");
+          var formResetPassword = document.getElementById(
+            "form-reset-password"
+          );
+          if (loginState) {
+            form.classList.remove("js-card-transition--hidden");
+            formResetPassword.classList.add("js-card-transition--hidden");
+          } else {
+            form.classList.add("js-card-transition--hidden");
+            formResetPassword.classList.remove("js-card-transition--hidden");
+          }
+        }
+
+        function displayError(err) {
+          var errorMessage = document.getElementById("error-message");
+          errorMessage.innerHTML =
+            err.policy || err.description || err.message || err;
+        }
+
+        function displayMessage(message) {
+          var successMessage = document.getElementById("success-message");
+          successMessage.innerHTML = message;
+        }
+
+        function cleanMessages() {
+          var errorMessage = document.getElementById("error-message");
+          var successMessage = document.getElementById("success-message");
+          errorMessage.innerHTML = "";
+          successMessage.innerHTML = "";
+        }
+
+        function changePassword() {
+          cleanMessages();
+          var username = document.getElementById("email-reset").value;
+
+          if (!username) {
+            displayError({ description: "Please enter a valid email" });
+            return;
+          }
+
+          webAuth.changePassword(
+            {
+              connection: databaseConnection,
+              email: username,
+            },
+            function (err, resp) {
+              if (err) {
+                displayError(err.message);
+              } else {
+                displayMessage(resp);
+              }
+            }
+          );
+        }
+
+        document.getElementById("btn-login").addEventListener("click", login);
+        document
+          .getElementById("btn-reset-password")
+          .addEventListener("click", changePassword);
+        document
+          .getElementById("btn-forgot-password")
+          .addEventListener("click", toggleForgotPasswordUI);
+        document
+          .getElementById("btn-login-link")
+          .addEventListener("click", toggleForgotPasswordUI);
+      });
+    </script>
+  </body>
+</html>

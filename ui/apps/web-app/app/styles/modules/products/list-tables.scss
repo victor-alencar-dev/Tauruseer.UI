@@ -1,0 +1,51 @@
+.data-grid.vulnerabilities-data-grid,
+.data-grid.code-vulnerabilities-data-grid,
+.data-grid.prioritized-risks-data-grid {
+  display: block;
+
+  .k-grid-header col:nth-of-type(1) {
+    width: 50%;
+  }
+  .k-grid-table col:nth-of-type(1) {
+    width: 50%;
+  }
+  .k-grid-header col:nth-of-type(2) {
+    width: 10%;
+  }
+  .k-grid-table col:nth-of-type(2) {
+    width: 10%;
+  }
+  .k-grid-header col:nth-of-type(3) {
+    width: 10%;
+  }
+  .k-grid-table col:nth-of-type(3) {
+    width: 10%;
+  }
+  .k-grid-header col:nth-of-type(4) {
+    width: 10%;
+  }
+  .k-grid-table col:nth-of-type(4) {
+    width: 10%;
+  }
+  .k-grid-header col:nth-of-type(5) {
+    width: 10%;
+  }
+  .k-grid-table col:nth-of-type(5) {
+    width: 10%;
+  }
+  .k-grid-header col:nth-of-type(6) {
+    width: 10%;
+  }
+  .k-grid-table col:nth-of-type(6) {
+    width: 10%;
+  }
+
+  // make the text only 3 lines and apply elipsis to the rest
+  .text-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

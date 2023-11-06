@@ -1,0 +1,57 @@
+@import './palette.scss';
+@import './typography.scss';
+
+.k-step-list-horizontal ~ .k-progressbar {
+  width: auto;
+}
+
+.k-step-indicator-text::after {
+  display: none;
+}
+
+.k-step-text {
+  font-family: $ff-ubuntu;
+}
+
+.k-progressbar .k-selected {
+  background-color: $palette-primary-main;
+}
+
+.k-stepper .k-step-done .k-step-indicator {
+  background-color: $palette-primary-main;
+  border-color: $palette-primary-main;
+
+  &:hover {
+    background-color: $palette-primary-main;
+    border-color: $palette-primary-main;
+  }
+}
+
+.k-stepper .k-step-current .k-step-indicator {
+  background-color: $palette-primary-main;
+  border-color: $palette-primary-main;
+
+  &:hover {
+    background-color: $palette-primary-main;
+    border-color: $palette-primary-main;
+  }
+}
+
+.k-stepper .k-step-current .k-step-indicator {
+  border-color: $palette-primary-main;
+  background-color: $palette-primary-main;
+}
+
+.k-stepper .k-step-current:hover .k-step-indicator,
+.k-stepper .k-step-current.k-hover .k-step-indicator,
+.k-stepper .k-step-current.k-step-hover .k-step-indicator {
+  background-color: $palette-primary-main;
+}
+
+.k-stepper .k-step-done.k-step-disabled .k-step-indicator,
+.k-stepper .k-step-done.k-disabled .k-step-indicator,
+.k-stepper .k-step-done:disabled .k-step-indicator {
+  border-color: $palette-primary-main;
+  color: #fff;
+  background-color: $palette-primary-main;
+}

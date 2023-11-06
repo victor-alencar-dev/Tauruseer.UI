@@ -1,0 +1,202 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'ubuntu';
+  src: url(fonts/Ubuntu-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url(fonts/Ubuntu-LightItalic.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url(fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url(fonts/Ubuntu-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url(fonts/Ubuntu-MediumItalic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url(fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url(fonts/Ubuntu-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf);
+  font-style: italic;
+}
+
+/* Regular Fonts */
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Italic Fonts */
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('fonts/static/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('/fonts/static/Montserrat-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'ubuntu' !important;
+  font-style: normal;
+  background-color: #fff;
+  color: #5b6770;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}

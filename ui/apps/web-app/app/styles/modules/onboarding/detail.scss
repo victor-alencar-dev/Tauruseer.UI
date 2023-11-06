@@ -1,0 +1,12 @@
+.onboarding-container {
+  &-welcome {
+    width: 940px;
+    height: 570px;
+    transition: all 200ms ease 0s;
+  }
+  &-septs {
+    width: 1280px;
+    height: 712px;
+    transition: all 200ms ease 0s;
+  }
+}

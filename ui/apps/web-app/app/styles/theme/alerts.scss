@@ -1,0 +1,26 @@
+@import './palette.scss';
+@import './typography.scss';
+
+.alert {
+  font-family: $ff-montserrat;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0px rgba(53, 39, 144, 0.18), 0px 4px 12px 0px rgba(53, 39, 144, 0.12),
+    0px 4px 8px 0px rgba(155, 145, 225, 0.2);
+
+  &-success {
+    background-color: $palette-success-light;
+    color: $palette-success-main;
+  }
+
+  &-info {
+    background-color: $palette-info-light;
+    color: $palette-info-main;
+  }
+
+  &-error {
+    background-color: #db4a4a26;
+    color: $palette-error-main;
+    border: 1px solid $palette-error-main;
+  }
+}

@@ -1,0 +1,72 @@
+// This palette structure is based on the MUI palette structure
+// https://material-ui.com/customization/palette/
+
+// For colors with opacity, add the hex code to the end of the color
+// 25% = 40
+// 50% = 80
+// 75% = bf
+// Primary
+$palette-primary-main: #4231b4;
+$palette-primary-light: #49a2f4;
+$palette-primary-dark: #0f0b29;
+$palette-primary-white: #fff;
+$palette-primary-border: #bcb5eb;
+
+// Secondary
+$palette-secondary-main: #282432;
+$palette-secondary-light: #d1ccf1; //
+$palette-background-color: #edebf9;
+$palette-background-light: #dedaf5;
+
+// Success
+$palette-success-light: #e5f8e8;
+$palette-success-main: #2b734e;
+$palette-success-secondary: #378632;
+$palette-success-highlight: #70c86a;
+
+// Warning
+$palette-warning-main: #ff8a00;
+$palette-warning-secondary: #ff961f;
+$palette-warning-light: #c99703;
+
+// Error
+$palette-error-main: #db4a4a;
+$palette-error-light: #f8d7da;
+$palette-error-dark: #721c24;
+$palette-error-background: #e166664d;
+
+// Info
+$palette-info-main: #437bd2;
+$palette-info-light: #daf4ff;
+$palette-info-copy: #2563eb;
+$palette-info-background: #2563eb33;
+
+// Text
+$palette-text-primary: #1b2124;
+$palette-text-secondary: #1b2124bf;
+$palette-text-muted: #acacac;
+$palette-text-subtitle: #7b7b7b;
+$palette-text-subtitle-strong: #626262; //rgba(123, 123, 123, 0.4); //
+$palette-text-success: #2bc977;
+
+// Icons
+$palette-icon-primary: #52295b;
+
+// Grey
+$pallete-grey-300: #f6f6f6;
+$palette-grey-400: #ddd;
+$palette-grey-450: #acacac;
+$palette-grey-500: #8d9091;
+
+$gradient-primary: linear-gradient(90deg, #261c67 0%, $palette-primary-dark 100%);
+
+//severities background colors
+$palette-severity-low: #2b734e1a;
+$palette-severity-medium: #c997031a;
+$palette-severity-hight: #ff8a001a;
+$palette-severity-critical: #e166661a;
+
+$palette-white: #fff;
+$palette-black: #000;
+$palette-notification-blue: #0d6efd;
+$palette-announcement-blue: #3b82f6;

@@ -1,0 +1,39 @@
+.grid-container {
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 0;
+  padding-top: 8px;
+  margin-top: 30px;
+  border-width: 1px;
+  background-color: white;
+}
+
+.data-grid .k-grid {
+  box-shadow: none;
+  margin-top: 5px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.data-grid .k-grid-header {
+  border-top-width: 1px;
+}
+
+.data-empty-grid {
+  min-height: 20vh;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.5;
+}
+.data-empty-grid .k-icon {
+  color: #4231B4;
+}
+.data-empty-grid .data-empty-message {
+  font-weight: 500;
+  color: #0F0B29;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=grid.css.map */

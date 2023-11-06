@@ -1,0 +1,178 @@
+// .typography is for main styles, like headers, body, etc.
+// .text-* are mainly for coloring
+@import './palette.scss';
+
+$ff-montserrat: 'montserrat', sans-serif !important;
+$ff-ubuntu: 'ubuntu', sans-serif;
+
+@mixin typography-base {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.ff {
+  &-montserrat {
+    font-family: $ff-montserrat;
+  }
+
+  &-ubuntu {
+    font-family: $ff-ubuntu !important;
+  }
+}
+
+.typography {
+  &-body1 {
+    @include typography-base();
+    font-family: $ff-montserrat;
+    font-size: 1.14286rem; //16px
+  }
+
+  &-body2 {
+    @include typography-base();
+    font-family: $ff-ubuntu;
+    font-size: 1.14286rem; //16px
+  }
+
+  &-big-title {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: $ff-ubuntu;
+  }
+
+  &-display {
+    font-size: 1.7145rem; // 24px
+    font-weight: 500;
+    font-family: $ff-ubuntu;
+  }
+
+  &-h {
+    &1 {
+      font-size: 1.14286rem;
+      font-weight: 500;
+      font-family: $ff-ubuntu;
+    }
+
+    &2 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-family: $ff-montserrat;
+    }
+
+    &3 {
+      font-size: 0.75rem;
+      font-weight: 500;
+      font-family: $ff-montserrat;
+    }
+
+    &4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.text {
+  // Text Colors
+  &-muted {
+    color: $palette-text-muted !important;
+    font-weight: 300;
+  }
+  &-subtitle {
+    color: $palette-text-subtitle !important;
+  }
+  &-danger,
+  &-error {
+    color: $palette-error-main !important;
+  }
+
+  &-success {
+    color: $palette-text-success !important;
+  }
+
+  &-warning {
+    color: $palette-warning-main !important;
+  }
+
+  &-primary-dark {
+    color: $palette-primary-dark !important;
+  }
+
+  &-primary-main {
+    color: $palette-primary-main !important;
+  }
+
+  &-anchor {
+    color: $palette-primary-light !important;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  // Font Sizes base on the used font
+  &-xs {
+    font-size: 0.75rem; //10px
+  }
+
+  &-sm {
+    font-size: 0.86rem; //12px
+  }
+
+  &-md {
+    font-size: 1rem; //14px
+  }
+
+  &-ml {
+    font-size: 1.14286rem; //16px
+  }
+
+  &-lg {
+    font-size: 1.25rem;
+  }
+
+  &-xl {
+    font-size: 1.5rem; //21px
+  }
+  &-xlg {
+    font-size: 1.7145rem; // 24px
+  }
+
+  &-xxl {
+    font-size: 2rem; //28px
+  }
+
+  &-xxlg {
+    font-size: 2.29rem; //32px
+  }
+
+  &-xxxl {
+    font-size: 2.43rem; //34px
+  }
+}
+
+.font {
+  &-light {
+    font-weight: 300;
+  }
+
+  &-regular {
+    font-weight: 400;
+  }
+
+  &-medium {
+    font-weight: 500;
+  }
+
+  &-bold {
+    font-weight: 600;
+  }
+  &-bolder {
+    font-weight: 700;
+  }
+
+  &-underline {
+    text-decoration: underline;
+  }
+
+  &-italic {
+    font-style: italic;
+  }
+}

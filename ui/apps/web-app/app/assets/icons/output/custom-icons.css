@@ -1,0 +1,61 @@
+
+
+.ts-add-teammembers::before {
+  content: '\';
+}
+
+.ts-add-user::before {
+  content: '\';
+}
+
+.ts-ai::before {
+  content: '\';
+}
+
+.ts-application-insights::before {
+  content: '\';
+}
+
+.ts-bamboo::before {
+  content: '\';
+}
+
+.ts-circle-check::before {
+  content: '\';
+}
+
+.ts-circle-ci::before {
+  content: '\';
+}
+
+.ts-circle-minus::before {
+  content: '\';
+}
+
+.ts-code-warrior::before {
+  content: '\';
+}
+
+.ts-new-relic::before {
+  content: '\';
+}
+
+.ts-paper-file::before {
+  content: '\';
+}
+
+.ts-sonar::before {
+  content: '\';
+}
+
+.ts-tauruseer::before {
+  content: '\';
+}
+
+.ts-travis-ci::before {
+  content: '\';
+}
+
+.ts-warning-circle::before {
+  content: '\';
+}

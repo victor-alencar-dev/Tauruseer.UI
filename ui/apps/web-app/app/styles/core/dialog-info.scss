@@ -1,0 +1,36 @@
+@import '../theme/palette.scss';
+.dialog-info {
+  .k-title-bar {
+    color: $palette-primary-dark;
+    background-color: white;
+    border-color: transparent;
+  }
+  .k-window-content {
+    padding: 0px;
+  }
+  .k-dialog {
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    border-radius: 0.625rem;
+  }
+
+  .k-window-titlebar,
+  .k-dialog-titlebar {
+    color: $palette-primary-dark;
+    background: white;
+    border-color: transparent;
+  }
+
+  .k-window-actions {
+    margin: 0;
+    padding: 0;
+    .footer-dialog {
+      height: 140px;
+      background-image: url('/dialog-f.svg');
+      background-repeat: no-repeat;
+      border-bottom-left-radius: 0.625rem;
+      border-bottom-right-radius: 0.625rem;
+    }
+  }
+}

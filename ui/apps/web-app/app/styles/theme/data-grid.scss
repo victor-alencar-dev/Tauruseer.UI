@@ -1,0 +1,244 @@
+@import './palette.scss';
+@import './shadows.scss';
+@import './typography.scss';
+
+$border-color: rgb($palette-primary-dark, 0.26);
+$border-radius: 8px;
+
+.align-right {
+  text-align: right;
+}
+
+.grid-container {
+  border-radius: $border-radius;
+  padding: 0;
+  padding-top: $border-radius;
+  // margin-top: 30px;
+  margin-bottom: 30px;
+  border-width: 1px;
+  background-color: white;
+  box-shadow: $shadow-button-purple;
+}
+
+.grid-container__actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+  margin-left: 48px;
+}
+
+.grid-container__heading-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.grid-container__filter {
+  width: 280px;
+  position: relative;
+  &-icon {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    color: $palette-text-subtitle;
+  }
+
+  &-input.k-input {
+    padding-left: 28px;
+  }
+}
+
+.data-grid {
+  $self: &;
+  .k-grid {
+    border-radius: spacing(1);
+    border: none;
+    width: inherit;
+    font-family: $ff-montserrat;
+    transition: all 0.25s ease;
+    box-shadow: $shadow-button-purple;
+    color: $palette-text-primary;
+    table {
+      border-collapse: collapse;
+    }
+
+    .k-header .k-sort-icon > .k-sort-order {
+      display: none;
+    }
+
+    #{$self}__checkbox {
+      padding-left: 1.25em;
+      text-align: center;
+    }
+
+    .k-selected > td {
+      background-color: #d1ccf1;
+    }
+  }
+
+  .k-grid-header {
+    overflow: hidden;
+    padding-right: 0;
+    font-weight: 700;
+    font-size: 14px;
+
+    th {
+      border-width: 0;
+      height: 40px;
+      padding: 0.5rem 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  .k-column-title {
+    font-size: 12px;
+  }
+
+  .k-grid-content {
+    overflow: auto;
+
+    tr:nth-child(odd) {
+      background: rgba($palette-secondary-light, 0.15);
+    }
+
+    tr:nth-child(even) {
+      background: rgba(white, 0.2);
+    }
+
+    tr:hover {
+      background-color: rgba($palette-background-color, 1) !important;
+    }
+
+    tr:last-child > td {
+      border-bottom-width: 1px;
+      border-bottom-color: $border-color;
+    }
+    tr > td:last-child {
+      padding-left: 1.5rem;
+    }
+
+    td {
+      border-width: 1px 0 1px 0;
+      border-bottom-color: $border-color;
+      padding: 0.5rem;
+      vertical-align: middle;
+      height: 56px;
+    }
+
+    .k-table-td:first-child {
+      padding-left: 1.5rem;
+    }
+  }
+
+  a {
+    transition: all 0.15s ease;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  &-spaceless {
+    .k-table-thead {
+      background-color: $palette-primary-main;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      color: $palette-primary-white;
+    }
+    .k-grid-header-table {
+      background-color: $palette-primary-main;
+      color: $palette-primary-white;
+    }
+
+    .k-grid {
+      box-shadow: none;
+      border-radius: 8px;
+      border-top: 1px solid #dee2e6;
+    }
+  }
+
+  &-unshadow {
+    .k-grid {
+      box-shadow: none;
+      margin-top: 5px;
+      border-bottom-right-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    .k-grid-header {
+      border-top-width: 1px;
+    }
+  }
+
+  .data-empty-grid {
+    min-height: 20vh;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+
+    .k-icon {
+      color: $palette-primary-main;
+    }
+
+    .data-empty-message {
+      font-weight: 500;
+      color: $palette-primary-dark;
+      margin-top: 20px;
+    }
+  }
+}
+
+.k-grid-pager {
+  height: 40px;
+  font-size: 12px;
+  color: $palette-text-primary;
+  font-weight: 600;
+  border-width: 1px 0 0 0;
+  background-color: white;
+  border-color: $border-color;
+  border-bottom-right-radius: spacing(1);
+  border-bottom-left-radius: spacing(1);
+
+  .row {
+    height: inherit;
+  }
+}
+
+.creator-identity {
+  font-size: 85%;
+  color: $palette-text-subtitle;
+}
+
+.data-source-icons {
+  vertical-align: middle;
+  i {
+    font-size: 24px;
+    padding: 4px;
+    margin-right: 0.2rem;
+    font-weight: 500;
+    color: $palette-text-primary;
+  }
+}
+
+.action-pager {
+  cursor: pointer;
+}
+
+.action-pager-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.page-grid {
+  padding: 0.7rem;
+  margin: 0px;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  margin-top: 10px;
+  box-sizing: content-box;
+  font-size: 0.75rem;
+  font-weight: 600;
+}

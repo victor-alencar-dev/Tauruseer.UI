@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'tauruseer-custom-icons';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('./custom-icons.ttf') format('truetype');
+}
+
+.tsb,
+.ts-brands {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-family: 'tauruseer-custom-icons';
+}

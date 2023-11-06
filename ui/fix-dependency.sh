@@ -1,0 +1,2 @@
+#!/bin/sh
+cat ./node_modules/@remix-run/node/dist/upload/fileUploadHandler.js | sed -e "s/var promises = require('fs\\/promises');/var promises = require('fs').promises;/g" | tee ./node_modules/@remix-run/node/dist/upload/fileUploadHandler.js >/dev/null

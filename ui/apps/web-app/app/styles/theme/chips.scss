@@ -1,0 +1,95 @@
+// Find more about chips here: https://material-ui.com/components/chips/
+@import './palette.scss';
+
+@mixin outlined-chip($color) {
+  background-color: white;
+  border: 0.5px solid;
+  border-color: $color;
+  color: $color;
+}
+
+.chip {
+  // min-height: spacing(4);
+  min-width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  @media (min-width: 720px) {
+    padding: 2px 8px;
+  }
+
+  &-outlined {
+    &-danger {
+      @include outlined-chip($palette-error-main);
+    }
+
+    &-warning {
+      @include outlined-chip($palette-warning-main);
+    }
+
+    &-info {
+      @include outlined-chip($palette-info-main);
+    }
+
+    &-success {
+      @include outlined-chip($palette-success-main);
+    }
+
+    &-warning {
+      @include outlined-chip($palette-warning-main);
+    }
+
+    &-primary-light {
+      @include outlined-chip($palette-primary-light);
+    }
+    &-primary {
+      @include outlined-chip($palette-primary-main);
+    }
+  }
+
+  &-small {
+    max-height: 22px !important;
+    min-height: 22px;
+    min-width: auto !important;
+  }
+  // some components have a static width of 100px
+  // this is a hack to override that
+  &-static-small {
+    width: 100px !important;
+  }
+
+  &-large {
+    min-height: spacing(5) !important;
+  }
+
+  &-danger {
+    background-color: $palette-error-main;
+  }
+
+  &-success {
+    background-color: $palette-success-main;
+  }
+
+  &-warning {
+    background-color: $palette-warning-main;
+  }
+
+  &-primary-dark {
+    background-color: $palette-primary-dark;
+  }
+  &-active {
+    background-color: $palette-primary-dark;
+
+    color: 'white';
+  }
+  &-secondary {
+    background-color: white;
+    color: $palette-primary-dark;
+    border: 0.5px solid $palette-primary-dark;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../theme/palette.scss';
+@import '../../theme/typography.scss';
+
+.code-vulnerabilities-expand-modal {
+  position: relative;
+  margin: 24px;
+  overflow-y: scroll;
+  width: 1000px;
+  padding-inline: 100px;
+
+  & pre {
+    padding: 0.5em;
+    background-color: #282b2e;
+    color: $palette-info-light;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @extend .typography-h1;
+  }
+}

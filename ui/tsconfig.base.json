@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@tauruseer/core": ["libs/core/src/index.ts"],
+      "@tauruseer/module": ["libs/modules/src/index.ts"],
+      "@tauruseer/api": ["apps/web-app/app/api/index.ts"],
+      "@tauruseer/ui": ["apps/web-app/app/ui/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp", "scripts"]
+}

@@ -1,0 +1,57 @@
+@import '../theme/palette.scss';
+
+.traceability-content {
+  height: 300px;
+  overflow-y: auto;
+}
+.traceability-timeline {
+  border-left-color: $palette-secondary-light !important;
+  border-left: 5px solid;
+  margin-left: 5px;
+}
+.traceability-status {
+  width: 33px;
+  height: 33px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  &__Info {
+    background-color: #2563eb33;
+    color: $palette-info-copy;
+  }
+  &__Error {
+    background-color: #db4a4a33;
+    color: $palette-error-main;
+  }
+  &__Successful {
+    background-color: #37863233;
+    color: $palette-success-secondary;
+  }
+  &__Warning {
+    background-color: #ff961f33;
+    color: $palette-warning-secondary;
+  }
+}
+.traceability-type {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: #e5e7eb;
+  color: $palette-text-subtitle;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+.traceability-description {
+  display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0px;
+  }
+}
+.traceability-user-avatar {
+  width: 17px;
+  height: 17px;
+  margin: 0 2px;
+  border-radius: 50%;
+}

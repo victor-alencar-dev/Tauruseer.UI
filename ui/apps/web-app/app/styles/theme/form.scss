@@ -1,0 +1,252 @@
+@import './palette.scss';
+@import './shadows.scss';
+@import './typography.scss';
+
+$transition: all 200ms ease 0s;
+// custom border color when input has value
+.value-detected {
+  border-color: $palette-primary-main !important;
+}
+
+.k-form {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: $palette-primary-dark;
+}
+
+.k-input-value-text {
+  font-family: $ff-montserrat;
+  padding-left: 8px;
+}
+
+.k-input,
+.k-dropdownlist {
+  font-family: $ff-montserrat;
+  font-size: 14px;
+  min-height: 48px;
+  border-radius: 6px;
+  border-color: #acacac; //rgb($palette-primary-dark, 0.26);
+  &:disabled {
+    background: rgb($palette-primary-dark, 0.2);
+  }
+  // custom placeholder style for input
+  // https://stackoverflow.com/questions/14524328/changing-font-family-for-placeholder
+  .k-input-inner::placeholder {
+    color: $palette-grey-500;
+    font-family: $ff-montserrat;
+  }
+  .k-input-inner::-ms-input-placeholder {
+    color: $palette-grey-500;
+    font-family: $ff-montserrat;
+  }
+}
+
+.k-picker-outline:focus-within {
+  box-shadow: none !important;
+  border-color: $palette-primary-main !important;
+}
+// inputs
+.k-input-solid:focus-within {
+  box-shadow: none !important;
+  border-color: $palette-primary-main !important;
+}
+.k-input-outline:focus-within {
+  border-color: none;
+}
+.k-input-outline:focus-within {
+  box-shadow: none !important;
+  border-color: $palette-primary-main !important;
+}
+
+.k-input-outline:focus,
+.k-input-outline.k-focus {
+  box-shadow: none !important;
+  border-color: $palette-primary-main !important;
+}
+// text-area
+.k-textarea {
+  min-height: 125px !important;
+
+  textarea:disabled {
+    background: rgb($palette-primary-dark, 0.2);
+
+    &::placeholder {
+      color: $palette-text-primary;
+    }
+  }
+}
+.k-input-md .k-input-inner,
+.k-picker-md .k-input-inner {
+  padding: 1rem;
+}
+
+//chip
+.k-chip-solid-base {
+  border: 0.5px solid $palette-primary-dark;
+  border-radius: 5px;
+  color: $palette-primary-dark;
+  background-color: white;
+}
+
+// switch
+.k-switch-on .k-switch-track {
+  border-color: $palette-primary-dark;
+  background-color: $palette-primary-dark;
+}
+
+.k-switch-off .k-switch-thumb {
+  background-color: $palette-primary-dark;
+}
+.k-picker-outline:hover {
+  background-color: transparent;
+  color: $palette-primary-dark;
+}
+
+.form-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  color: $palette-primary-dark;
+  transition: $transition;
+  box-shadow: $shadow-footer;
+  z-index: 100;
+  height: 64px;
+  padding: 0 20px;
+
+  &-expanded {
+    left: 301px;
+    width: calc(100vw - 301px);
+  }
+
+  &-collapse {
+    left: 63px;
+    width: calc(100vw - 63px);
+  }
+
+  &-btn-expanded {
+    transition: $transition;
+    margin-top: 10px;
+    // margin-right: 350px;
+  }
+
+  &-btn-collapse {
+    transition: $transition;
+    margin-top: 10px;
+    // margin-right: 111px;
+  }
+}
+
+.form-button {
+  font-family: 'ubuntu';
+  margin-top: 18px !important;
+}
+
+// fixes icon position in filter input
+.k-icon.k-i-search.k-input-icon,
+.k-input-prefix .k-svg-icon {
+  color: $palette-primary-dark;
+  margin-left: calc(4px + 0.5rem);
+  margin-right: calc(4px + 0.5rem);
+  height: 16px;
+  width: 16px;
+}
+
+.k-input-md .k-input-inner,
+.k-picker-md .k-input-inner {
+  padding-left: 0;
+}
+
+.k-input-md textarea.k-input-inner,
+.k-picker-md textarea.k-input-inner {
+  padding-left: 1rem;
+}
+
+// custom-floating-label-input
+.k-floating-label-container > .k-label {
+  margin-top: 6px;
+  color: $palette-grey-500;
+  font-weight: 400;
+}
+.k-floating-label-container > .k-label,
+.k-floating-label-container.k-focus > .k-label {
+  top: 4px;
+  left: 12px;
+  transform: scale(1);
+}
+.k-floating-label-container > .k-label {
+  background-color: white;
+  width: fit-content;
+  padding: 0px 5px;
+}
+.k-input-solid:focus-within {
+  box-shadow: none;
+  border-color: $palette-primary-main;
+}
+
+// override  k-checkbox-wrap for custom form checkbox
+.form-checkbox {
+  display: block !important;
+}
+// multi-tree-custom-design
+.k-checkbox-wrap {
+  display: none;
+}
+.k-treeview-leaf {
+  width: 100%;
+  padding: 5px !important;
+}
+.k-treeview-toggle {
+  display: none;
+}
+.k-treeview-item {
+  padding: 0;
+}
+.k-treeview-item {
+  align-items: center;
+  border: none;
+  :hover {
+    background-color: $palette-background-light;
+  }
+}
+.k-input-md .k-input-values,
+.k-picker-md .k-input-values {
+  padding: 0.7rem;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.k-popup-dropdowntree .k-treeview,
+.k-dropdowntree-popup .k-treeview,
+.k-multiselecttree-popup .k-treeview {
+  overflow-x: hidden;
+  max-height: 230px;
+}
+.ts-multiselect-option-selected {
+  border: none;
+  color: $palette-primary-dark;
+  background-color: $palette-background-light;
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+//checkbox
+.k-checkbox {
+  border-color: #acacac;
+}
+.k-checkbox:checked,
+.k-checkbox.k-checked {
+  border-color: $palette-primary-main;
+  background-color: $palette-primary-main;
+}
+.k-checkbox-lg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.k-checkbox-label {
+  font-family: $ff-montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  color: $palette-primary-dark;
+  margin-inline-start: 0.5rem !important;
+}

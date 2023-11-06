@@ -1,0 +1,62 @@
+@import './shadows.scss';
+@import './palette.scss';
+.icon-button {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 100ms all;
+
+  &:hover {
+    background-color: rgba(black, 0.04);
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.custom-switch {
+  .k-switch-md,
+  .k-switch-md .k-switch-track {
+    width: 40px;
+  }
+  .k-switch-track {
+    height: 18px;
+  }
+  .k-switch-thumb {
+    width: 22px;
+    height: 22px;
+  }
+
+  .k-switch-md.k-switch-off .k-switch-thumb-wrap {
+    left: 11px;
+  }
+  .k-switch-md.k-switch-on .k-switch-thumb-wrap {
+    left: calc(100% - 11px);
+  }
+  .k-switch-off .k-switch-track {
+    border-color: #fff;
+    background-color: #7b7b7b;
+  }
+  .k-switch-off .k-switch-thumb {
+    background-color: #fff;
+    box-shadow: $shadow-paper;
+  }
+  .k-switch-on .k-switch-thumb {
+    background-color: $palette-primary-main;
+    box-shadow: $shadow-button-purple;
+  }
+  .k-switch-on .k-switch-track {
+    border-color: #9b91e1;
+    background-color: #9b91e1;
+  }
+}

@@ -1,0 +1,75 @@
+.left-nav-open {
+  width: 21.5rem;
+  min-width: 21.5rem;
+  transition: all 200ms ease 0s;
+  flex: 0 auto;
+  height: 95.5vh;
+  .toggle-left-nav-open {
+    position: absolute;
+    right: -12px;
+    top: 5px;
+  }
+  .k-drawer {
+    color: #fff;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.left-nav-close {
+  width: 4.5rem;
+  min-width: 4.5rem;
+  transition: all 200ms ease 0s;
+  flex: 0 auto;
+  height: 94.5vh;
+  .toggle-left-nav-close {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+  }
+  .k-drawer {
+    color: #fff;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.k-drawer {
+  background-color: #333f48 !important;
+  box-shadow: 4px 0px 14px rgba(0, 0, 0, 0.25);
+}
+.k-drawer-item {
+  padding: 0.2rem 1.2rem 0.2rem 1.2rem !important;
+  line-height: 2.5 !important;
+  font-weight: 400;
+  font-family: 'ubuntu';
+
+  .k-icon {
+    font-size: 20px !important;
+  }
+}
+
+.k-drawer-item.k-selected {
+  background-color: #282432 !important;
+  font-weight: 700;
+}
+
+.k-drawer-content {
+  position: relative;
+}
+
+.k-button-solid-base:focus {
+  box-shadow: none;
+}
+.item-wrap {
+  padding-left: 26px;
+}
+.k-badge-sm {
+  font-size: 0.65rem;
+  padding: 0.2em 0.325em;
+  margin-top: 8px;
+  margin-right: -9px;
+}

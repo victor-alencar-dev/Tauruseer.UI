@@ -1,0 +1,35 @@
+@import './palette.scss';
+@import './typography.scss';
+
+.k-breadcrumb {
+  background-color: transparent;
+  font-family: $ff-ubuntu;
+}
+
+.k-breadcrumb-link {
+  color: rgba($palette-text-primary, 0.5);
+  margin: 0 6px;
+  padding: 0;
+  font-family: $ff-ubuntu;
+
+  &:hover {
+    color: $palette-text-primary;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.k-breadcrumb-container li:last-child .k-breadcrumb-link {
+  color: $palette-text-primary;
+  font-weight: 500;
+
+  &.k-disabled {
+    opacity: 1;
+  }
+}
+
+.k-breadcrumb-item {
+  color: rgba($palette-text-primary, 0.5);
+}

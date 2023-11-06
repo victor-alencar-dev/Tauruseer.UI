@@ -1,0 +1,134 @@
+@import '../theme/palette.scss';
+
+.ts-chip__icon {
+  margin-right: 6px;
+}
+.ts-chip__icon-right {
+  margin-left: 4px;
+}
+
+.ts-chip-status {
+  font-family: Ubuntu;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: $palette-primary-dark;
+
+  &--secondary {
+    color: $palette-info-copy;
+    background: $palette-info-background;
+  }
+
+  &--primary {
+    color: $palette-primary-main;
+    background: $palette-background-light;
+  }
+
+  &--error {
+    color: $palette-error-dark;
+    background: $palette-error-background;
+  }
+}
+
+.ts-chip-badge {
+  font-family: Ubuntu;
+  font-size: 12px;
+  padding: 4px 16px;
+  border: 0.5px solid $palette-primary-dark;
+  border-radius: 5px;
+  color: $palette-primary-dark;
+  background: #fff;
+
+  &--danger {
+    border: 0.5px solid $palette-error-main;
+    color: $palette-error-main;
+  }
+
+  &--warning {
+    border: 0.5px solid $palette-warning-main;
+    color: $palette-warning-main;
+  }
+
+  &--info {
+    border: 0.5px solid $palette-info-main;
+    color: $palette-info-main;
+  }
+
+  &--primary {
+    border: 0.5px solid $palette-primary-main;
+    color: $palette-primary-main;
+  }
+
+  &--light-warning {
+    border: 0.5px solid $palette-warning-light;
+    color: $palette-warning-light;
+  }
+
+  &--success {
+    border: 0.5px solid $palette-success-main;
+    color: $palette-success-main;
+  }
+}
+// this should be the standard now on
+.ts-chip-severity {
+  font-family: Ubuntu;
+  font-size: 12px;
+  padding: 4px 16px;
+  border: 0.5px solid $palette-primary-dark;
+  border-radius: 5px;
+  color: $palette-primary-dark;
+
+  &--critical {
+    border: 0.5px solid $palette-error-main;
+    color: $palette-error-main;
+    background-color: $palette-severity-critical;
+  }
+
+  &--high {
+    border: 0.5px solid $palette-warning-main;
+    color: $palette-warning-main;
+    background-color: $palette-severity-hight;
+  }
+
+  &--medium {
+    border: 0.5px solid $palette-warning-light;
+    color: $palette-warning-light;
+    background-color: $palette-severity-medium;
+  }
+
+  &--low {
+    border: 0.5px solid $palette-success-main;
+    color: $palette-success-main;
+    background-color: $palette-severity-low;
+  }
+}
+
+.ts-chip-breadcrumb {
+  font-family: Ubuntu;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--neutral-neutral-100, #f3f4f6);
+  color: var(--Main-Gray, #7b7b7b);
+
+  &--link {
+    color: $palette-info-main;
+  }
+}
+
+.ts-chip-general {
+  font-family: Ubuntu;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  color: #fff;
+
+  &--primary {
+    background: $palette-primary-main;
+  }
+
+  &--secondary {
+    background: $palette-info-copy;
+  }
+}

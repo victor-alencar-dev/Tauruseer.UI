@@ -1,0 +1,33 @@
+@import '../../theme/shadows.scss';
+
+$border-radius: 8px;
+.grid-container {
+  border-radius: $border-radius;
+  padding: 0;
+  padding-top: $border-radius;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-width: 1px;
+  background-color: white;
+  .product-header-list {
+    height: 80px;
+  }
+}
+
+.data-grid {
+  .k-grid {
+    box-shadow: none;
+    margin-top: 5px;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .k-grid-header {
+    border-top-width: 1px;
+  }
+}
+.sbom-grid {
+  .page-grid {
+    box-shadow: $shadow-button-purple;
+  }
+}
